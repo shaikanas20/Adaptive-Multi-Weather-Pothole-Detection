@@ -1,0 +1,8 @@
+path: "D:/research papper/rs/data/Multi-Weather Pothole Detection (MWPD)/Multi-Weather Pothole Detection (MWPD)/MWPD"
+
+train: "train/images"
+val: "valid/images"
+test: "test/images"
+
+names:
+  0: Pothole

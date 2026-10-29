@@ -1,0 +1,11 @@
+path: "D:/research papper/rs/data/Multi-Weather Pothole Detection (MWPD)/controlled_conditions/shadow"
+train: images
+val: images
+test: images
+
+names:
+  0: Longitudinal Crack
+  1: Transverse Crack
+  2: Alligator Crack
+  3: Pothole
+  4: Other / Repair Mark

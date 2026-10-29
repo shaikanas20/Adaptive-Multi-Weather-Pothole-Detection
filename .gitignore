@@ -1,0 +1,59 @@
+# =============================================================
+# Ignored large datasets in /data (too large for GitHub)
+# =============================================================
+data/An Annotated Water-Filled, and Dry Potholes Dataset for Deep Learning Applications/
+data/Bandung Pothole Image Dataset (BPID)/
+data/RDD2022/
+
+# Keep Multi-Weather Pothole Detection (MWPD) — not in the ignore list
+# data/Multi-Weather Pothole Detection (MWPD)/
+
+# =============================================================
+# Model weights (large binary files)
+# =============================================================
+*.pt
+*.pth
+*.onnx
+*.weights
+
+# =============================================================
+# Python
+# =============================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.env
+
+# =============================================================
+# Jupyter / IPython
+# =============================================================
+.ipynb_checkpoints/
+*.ipynb
+
+# =============================================================
+# Experiment / training output
+# =============================================================
+runs/
+
+# =============================================================
+# Zip archives (large compressed files already in repo root)
+# =============================================================
+*.zip
+
+# =============================================================
+# OS / IDE
+# =============================================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

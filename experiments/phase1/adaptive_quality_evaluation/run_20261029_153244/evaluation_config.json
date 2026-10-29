@@ -1,0 +1,53 @@
+{
+  "experiment": "Experiment 7 - Adaptive Detection Quality Evaluation",
+  "run_name": "run_20261029_153244",
+  "device": "0",
+  "nano_checkpoint": "D:\\research papper\\rs\\experiments\\phase1\\mwpd\\weights\\best.pt",
+  "medium_checkpoint": "D:\\research papper\\rs\\experiments\\phase1\\mwpd_yolov8m\\weights\\best.pt",
+  "condition_images_root": "D:\\research papper\\rs\\data\\Multi-Weather Pothole Detection (MWPD)\\controlled_conditions_advanced",
+  "labels_directory": "D:\\research papper\\rs\\data\\Multi-Weather Pothole Detection (MWPD)\\Multi-Weather Pothole Detection (MWPD)\\MWPD\\test\\labels",
+  "conditions": [
+    "normal",
+    "low_light",
+    "fog",
+    "rain",
+    "shadow",
+    "water_reflection"
+  ],
+  "images_per_condition": {
+    "normal": 97,
+    "low_light": 97,
+    "fog": 97,
+    "rain": 97,
+    "shadow": 97,
+    "water_reflection": 97
+  },
+  "image_size": 640,
+  "prediction_confidence": 0.001,
+  "nms_iou": 0.7,
+  "max_detections": 300,
+  "adaptive_threshold": 0.25,
+  "metric_confidence_threshold": 0.25,
+  "precision_recall_f1_iou_threshold": 0.5,
+  "ap_iou_thresholds": [
+    0.5,
+    0.55,
+    0.6000000000000001,
+    0.6500000000000001,
+    0.7000000000000002,
+    0.7500000000000002,
+    0.8000000000000003,
+    0.8500000000000003,
+    0.9000000000000004,
+    0.9500000000000004
+  ],
+  "label_source": "Canonical MWPD test labels matched by image filename stem",
+  "metric_method": "Custom single-class, greedy one-to-one IoU matching. Pooled precision/recall/F1 are computed per condition. AP is calculated by globally confidence-ranking predictions within each condition.",
+  "latency_caveat": "The adaptive latency column is an estimated selected-path latency: nano inference time plus medium inference time only when nano confidence is below threshold. Both models are executed for every image in this evaluation to obtain the fixed-model baselines. Therefore, this is NOT a direct wall-clock measurement of a deployed adaptive pipeline.",
+  "important_limitations": [
+    "These are custom metrics and may differ from official Ultralytics validation metrics.",
+    "Condition images share canonical labels matched by filename stem.",
+    "The evaluation does not establish statistical significance.",
+    "The script evaluates detection quality and estimated path latency, not energy consumption."
+  ]
+}

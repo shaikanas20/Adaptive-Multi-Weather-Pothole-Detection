@@ -1,0 +1,13 @@
+# train: /content/drive/MyDrive/yolov9/PD/train/images
+# val: /content/drive/MyDrive/yolov9/PD/valid/images
+# test: /content/drive/MyDrive/yolov9/PD/test/images
+
+path: "D:/research papper/rs/data/Multi-Weather Pothole Detection (MWPD)/Multi-Weather Pothole Detection (MWPD)/MWPD"
+
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names: ['Potholes']
+

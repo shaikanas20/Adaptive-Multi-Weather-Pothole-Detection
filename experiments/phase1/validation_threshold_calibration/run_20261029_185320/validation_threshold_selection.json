@@ -1,0 +1,68 @@
+{
+  "experiment": "Validation-only confidence threshold calibration",
+  "run_name": "run_20261029_185320",
+  "threshold_selected": 0.3,
+  "selection_objective": "Maximize validation recall subject to: F1 no more than 0.010 below fixed nano; mAP50-95 no more than 0.020 below the better fixed model; and estimated energy no more than 50% of fixed medium.",
+  "validation_image_count": 260,
+  "device": "0",
+  "prediction_confidence": 0.001,
+  "metric_confidence": 0.25,
+  "nms_iou": 0.7,
+  "image_size": 640,
+  "nano_checkpoint": "D:\\research papper\\rs\\experiments\\phase1\\mwpd\\weights\\best.pt",
+  "medium_checkpoint": "D:\\research papper\\rs\\experiments\\phase1\\mwpd_yolov8m\\weights\\best.pt",
+  "fixed_nano_validation": {
+    "ground_truth_boxes": 573,
+    "tp": 444,
+    "fp": 266,
+    "fn": 129,
+    "precision": 0.6253521126760564,
+    "recall": 0.774869109947644,
+    "f1": 0.6921278254091973,
+    "mAP50": 0.7621123347990503,
+    "mAP50_95": 0.3585692261601203
+  },
+  "fixed_medium_validation": {
+    "ground_truth_boxes": 573,
+    "tp": 415,
+    "fp": 309,
+    "fn": 158,
+    "precision": 0.5732044198895028,
+    "recall": 0.7242582897033158,
+    "f1": 0.6399383191981496,
+    "mAP50": 0.7219505182751148,
+    "mAP50_95": 0.34351110296215415
+  },
+  "constraints": {
+    "minimum_f1": 0.6821278254091973,
+    "minimum_map50_95": 0.3385692261601203,
+    "maximum_estimated_energy_J_per_image": 0.6302
+  },
+  "selected_validation_result": {
+    "threshold": 0.3,
+    "ground_truth_boxes": 573,
+    "tp": 445,
+    "fp": 277,
+    "fn": 128,
+    "precision": 0.6163434903047091,
+    "recall": 0.7766143106457243,
+    "f1": 0.6872586872586872,
+    "mAP50": 0.7631404140881168,
+    "mAP50_95": 0.3594295084371027,
+    "escalated_images": 8,
+    "escalation_rate": 0.03076923076923077,
+    "estimated_latency_ms": 12.795680769116958,
+    "estimated_energy_J_per_image": 0.40948153846153845,
+    "estimated_energy_saving_vs_medium_pct": 67.5117789224422,
+    "f1_floor": 0.6821278254091973,
+    "map50_95_floor": 0.3385692261601203,
+    "energy_budget_J_per_image": 0.6302
+  },
+  "energy_model": {
+    "nano_energy_J_per_image": 0.3707,
+    "medium_energy_J_per_inference": 1.2604,
+    "formula": "estimated adaptive energy = nano energy per image + escalation rate * medium energy per inference",
+    "caveat": "Energy costs are approximate means from the earlier three-repeat GPU measurement. They are not fresh power measurements on the validation split."
+  },
+  "metric_caveat": "These are custom single-class validation metrics, not official Ultralytics validation metrics. Threshold selection uses only the validation split; do not use held-out test results to change the selected threshold."
+}

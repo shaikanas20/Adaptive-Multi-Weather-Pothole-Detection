@@ -1,0 +1,12 @@
+{
+  "dataset_yaml": "D:\\research papper\\rs\\data\\Multi-Weather Pothole Detection (MWPD)\\Multi-Weather Pothole Detection (MWPD)\\MWPD\\data.yaml",
+  "condition_images_root": "D:\\research papper\\rs\\data\\Multi-Weather Pothole Detection (MWPD)\\controlled_conditions_advanced",
+  "canonical_test_labels": "D:\\research papper\\rs\\data\\Multi-Weather Pothole Detection (MWPD)\\Multi-Weather Pothole Detection (MWPD)\\MWPD\\test\\labels",
+  "images_audited": 582,
+  "boxes_parsed_across_condition_views": 1752,
+  "issue_records": 0,
+  "overall_bbox_area_ratio_mean": 0.06206963944108519,
+  "overall_bbox_area_ratio_median": 0.0190155029296875,
+  "overall_bbox_area_ratio_p90": 0.180845947265625,
+  "scientific_limitation": "Bounding-box geometry is a visual proxy, not physical pothole severity. These outputs do not establish validated severity classes."
+}

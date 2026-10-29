@@ -1,0 +1,6 @@
+path: D:/research papper/rs/experiments/phase1/experiment6_shadow_augmentation/dataset
+train: images/train
+val: images/val
+nc: 1
+names:
+- Potholes
